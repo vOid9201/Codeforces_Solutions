@@ -1,3 +1,15 @@
+question link - https://codeforces.com/problemset/problem/1561/C
+things to understand -> in this question greedy will be used so that we can determine the optimal order to move among the caves 
+                        first i was doing finding maximum within the caves and then sorting them in an increasing order but then 
+                        to mind that i can only visit the cave when i instead of using maximum value using (value - increae in power)
+                        as for eg
+                        2
+                        4 21 19 10 22 -> max = 22 but wahan tak pahunchne ke liye 4 step liye toh answer = 18 but to cross 21 i need 22 that's why 
+                        order is not decided by max but by value - power increase till then
+after understanding this just appllied binary_search  : ) 
+
+code for the same  -  >    
+ 
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -13,21 +25,6 @@ using namespace std;
 #define m map<ll,ll>
 #define W(x) while(x--)
 #define REV(i,a,b) for(ll i=a;i>=b;i--)
-
-/*code of Sieve which stores least prime factor of a number
-vector<int> sieve(1e5+1);
-void NewSieveOfEratosthenes(){
-    for(int i=1;i<1e5+1;i++)
-        sieve[i] = -1;
-    for(int p=2;p*p<=1e5;p++){
-        if(sieve[p] == -1){
-            for(int i=2*p;i<=1e5;i+=p){
-                sieve[i] = p;
-            }
-        }
-    }
-}
-*/
 
 bool minimumPowerRequire(vector<int> arr[] , int order[] , int power , int n){
     for(int i=0;i<n;i++){
