@@ -1,3 +1,12 @@
+/*
+Question link - > https://codeforces.com/problemset/problem/1165/E
+
+Hint --- > think of how many number of aibi present 
+IMP Point ----- > 1-) apnko every step pf calculation pe check karna chahiye ki overflow ho rha yaa nhi 
+                  2-) uske alawa dont use mod if we are performing some sorting or any operations over the processed data
+                  3-) and use mod at these places -  >> >  (a+b)== (a%mod + b%mod)% mod , (a*b) == (a%mod * b%mod)%mod 
+                      --->>> (a-b) == (a%mod - b%mod + mod)%mod
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
